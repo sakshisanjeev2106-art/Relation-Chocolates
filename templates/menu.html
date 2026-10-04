@@ -9,6 +9,12 @@
 {% block content %}
   <section class="section menu-section-wrap">
     <div class="container menu-container">
+      <header class="menu-heading">
+        <p class="section-kicker">Made by hand, made to share</p>
+        <h1>Our menu</h1>
+        <p>Browse cakes, chocolates, and fresh bakes from our kitchen.</p>
+      </header>
+
       <div class="menu-order-bar">
         <a
           class="btn btn-secondary"
@@ -28,7 +34,7 @@
         >
       </div>
 
-      <div class="menu-category-nav" aria-label="Menu categories">
+      <div class="menu-category-nav" role="tablist" aria-label="Menu categories">
         <button class="menu-tab active" data-target="cakes">Cakes</button>
         <button class="menu-tab" data-target="cupcakes">Cupcakes</button>
         <button class="menu-tab" data-target="dessert-shots">Dessert Shots</button>
@@ -352,18 +358,49 @@
   </section>
 
   <script>
-    const tabs = document.querySelectorAll('.menu-tab');
-    const panels = document.querySelectorAll('.menu-panel');
+    const tabs = [...document.querySelectorAll('.menu-tab')];
+    const panels = [...document.querySelectorAll('.menu-panel')];
 
-    tabs.forEach((tab) => {
-      tab.addEventListener('click', () => {
-        const target = tab.dataset.target;
+    function activateTab(tab, moveFocus = false) {
+      const target = tab.dataset.target;
 
-        tabs.forEach((button) => button.classList.toggle('active', button === tab));
-        panels.forEach((panel) => {
-          panel.classList.toggle('active', panel.id === target);
-        });
+      tabs.forEach((button) => {
+        const selected = button === tab;
+        button.classList.toggle('active', selected);
+        button.setAttribute('role', 'tab');
+        button.setAttribute('aria-selected', String(selected));
+        button.setAttribute('aria-controls', button.dataset.target);
+        button.id = `menu-tab-${button.dataset.target}`;
+        button.tabIndex = selected ? 0 : -1;
+      });
+
+      panels.forEach((panel) => {
+        const selected = panel.id === target;
+        panel.classList.toggle('active', selected);
+        panel.hidden = !selected;
+        panel.setAttribute('role', 'tabpanel');
+        panel.setAttribute('aria-labelledby', `menu-tab-${panel.id}`);
+        panel.tabIndex = 0;
+      });
+
+      if (moveFocus) tab.focus();
+    }
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => activateTab(tab));
+      tab.addEventListener('keydown', (event) => {
+        let nextIndex = index;
+        if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabs.length;
+        else if (event.key === 'ArrowLeft') nextIndex = (index - 1 + tabs.length) % tabs.length;
+        else if (event.key === 'Home') nextIndex = 0;
+        else if (event.key === 'End') nextIndex = tabs.length - 1;
+        else return;
+
+        event.preventDefault();
+        activateTab(tabs[nextIndex], true);
       });
     });
+
+    activateTab(tabs.find((tab) => tab.classList.contains('active')) || tabs[0]);
   </script>
 {% endblock %}
