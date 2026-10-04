@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Relation Chocolates | Home{% endblock %}
+
+{% block content %}
+  <section class="hero">
+    <div class="container hero-content">
+      <p class="hero-label">Handcrafted with love</p>
+      <h1>Relation Chocolates</h1>
+      <p class="hero-tagline">Crafting memories one bite at a time</p>
+      <p class="hero-text">
+        From homemade chocolates to fresh baked treats, everything is made with care
+        to make your everyday moments a little sweeter.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ url_for('menu') }}">View Our Menu</a>
+        <a
+          class="btn btn-primary"
+          href="https://wa.me/919043682788?text=Hi!%20I%20want%20to%20place%20an%20order."
+          target="_blank"
+          rel="noopener noreferrer"
+          >Order</a
+        >
+      </div>
+    </div>
+  </section>
+
+  <section class="story-preview section section--cream">
+    <div class="container story-preview-inner">
+      <div>
+        <h2>Our Story</h2>
+        <p>
+          Our story began in a small kitchen, making chocolates with toy moulds and a
+          lot of love. What started as a simple homemade experiment has grown into a
+          place for handcrafted chocolates, cakes, breads, pizza bases, and all kinds of
+          fresh baked goods made to share, gift, and enjoy.
+        </p>
+        <p>
+          Relation Chocolates was born from a love of slow, thoughtful craftsmanship.
+          Every recipe in our kitchen is made with care, from handcrafted chocolates
+          and rich cakes to fresh breads, pizza bases, and other baked treats. Whether
+          it's something sweet, comforting, or made for a special occasion, we aim to
+          create food that feels homemade, memorable, and full of heart.
+        </p>
+      </div>
+    </div>
+  </section>
+{% endblock %}

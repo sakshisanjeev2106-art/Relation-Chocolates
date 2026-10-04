@@ -1,0 +1,369 @@
+{% extends "base.html" %}
+
+{% block title %}Relation Chocolates | Menu{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}" />
+{% endblock %}
+
+{% block content %}
+  <section class="section menu-section-wrap">
+    <div class="container menu-container">
+      <div class="menu-order-bar">
+        <a
+          class="btn btn-secondary"
+          href="https://wa.me/{{ whatsapp_number }}?text=Hi!%20I%20want%20to%20place%20an%20order."
+          target="_blank"
+          rel="noopener noreferrer"
+          >Order on WhatsApp</a
+        >
+        <a class="btn btn-secondary" href="tel:+919043682788">Call 90436 82788</a>
+        <a class="btn btn-secondary" href="tel:+917904995130">Call 79049 95130</a>
+        <a
+          class="btn btn-secondary"
+          href="https://wa.me/{{ whatsapp_number }}?text=Hi!%20I%20need%20a%20custom%20cake%20or%20bulk%20order."
+          target="_blank"
+          rel="noopener noreferrer"
+          >Custom Order</a
+        >
+      </div>
+
+      <div class="menu-category-nav" aria-label="Menu categories">
+        <button class="menu-tab active" data-target="cakes">Cakes</button>
+        <button class="menu-tab" data-target="cupcakes">Cupcakes</button>
+        <button class="menu-tab" data-target="dessert-shots">Dessert Shots</button>
+        <button class="menu-tab" data-target="brownie">Brownie</button>
+        <button class="menu-tab" data-target="chocolates">Chocolates</button>
+        <button class="menu-tab" data-target="breads">Breads</button>
+        <button class="menu-tab" data-target="stuffed-buns">Stuffed Buns</button>
+        <button class="menu-tab" data-target="garlic-bread">Garlic Bread</button>
+        <button class="menu-tab" data-target="donuts">Donuts</button>
+        <button class="menu-tab" data-target="focaccia">Focaccia</button>
+        <button class="menu-tab" data-target="cookies">Cookies</button>
+        <button class="menu-tab" data-target="sweet-tarts">Sweet Tarts</button>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-panel active" id="cakes">
+          <div class="menu-card">
+            <div class="menu-title-row">CAKES</div>
+            <table class="menu-table">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>1kg</th>
+                  <th>1/2kg</th>
+                  <th>350gm</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Whipped Cream Frosting</td><td>1400</td><td>800</td><td>500</td></tr>
+                <tr><td>Vanilla</td><td>1400</td><td>800</td><td>500</td></tr>
+                <tr><td>Chocolate</td><td>1500</td><td>900</td><td>550</td></tr>
+                <tr><td>Butterscotch</td><td>1500</td><td>800</td><td>500</td></tr>
+                <tr><td>Black Forest</td><td>1500</td><td>900</td><td>550</td></tr>
+                <tr><td>White Forest</td><td>1500</td><td>900</td><td>550</td></tr>
+                <tr><td colspan="4" class="menu-subheading">Cakes with fresh fruits</td></tr>
+                <tr><td>Pineapple</td><td>1500</td><td>900</td><td>550</td></tr>
+                <tr><td>Strawberry</td><td>1500</td><td>900</td><td>550</td></tr>
+                <tr><td>Blueberry</td><td>1500</td><td>900</td><td>550</td></tr>
+                <tr><td>Mango (seasonal)</td><td>1500</td><td>900</td><td>550</td></tr>
+                <tr><td>Lemon</td><td>1500</td><td>900</td><td>550</td></tr>
+                <tr><td>Dark Chocolate Orange(seasonal)</td><td>1500</td><td>900</td><td>550</td></tr>
+                <tr><td>Vanilla Raspberry</td><td>1500</td><td>900</td><td>550</td></tr>
+                <tr><td>Chocolate Truffle (ganache frosting)</td><td>1500</td><td>900</td><td>550</td></tr>
+                <tr><td>Fondant Cake (ganache frosting)</td><td>1800</td><td>900</td><td>550</td></tr>
+                <tr><td>Customised Cake</td><td>1800</td><td>900</td><td>600</td></tr>
+                <tr><td>Red Velvet</td><td>1800</td><td>900</td><td>550</td></tr>
+                <tr><td>Rasmalai / Gulab Jamun</td><td>1600</td><td>900</td><td>600</td></tr>
+                <tr><td>Cakes with butter cream frosting (Any Flavour)</td><td>1600</td><td>900</td><td>600</td></tr>
+                <tr><td>Tres leches cake</td><td>1600</td><td>900</td><td>600</td></tr>
+                <tr><td>Naked Cake (Any flavour)</td><td>1400</td><td>600</td><td>450</td></tr>
+                <tr><td>Plain sponge Cakes (without icing)</td><td>1000</td><td>500</td><td>250</td></tr>
+                <tr><td>Marble sponge cake (without icing)</td><td>1100</td><td>550</td><td>300</td></tr>
+                <tr><td>Pineapple upside down</td><td>1000</td><td>700</td><td>350</td></tr>
+                <tr><td>Dry fruit mawa cake</td><td>1300</td><td>700</td><td>400</td></tr>
+                <tr><td>Wholewheat healthy cake</td><td>1200</td><td>600</td><td>400</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="cupcakes">
+          <div class="menu-card">
+            <div class="menu-title-row">CUPCAKES</div>
+            <table class="menu-table">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Mini</th>
+                  <th>Small</th>
+                  <th>Medium</th>
+                  <th>Big</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Any Flavour</td><td>30</td><td>40</td><td>60</td><td>70</td></tr>
+                <tr><td>Customised</td><td>40</td><td>50</td><td>70</td><td>80</td></tr>
+              </tbody>
+            </table>
+            <div class="menu-note-banner">EXTRA CHARGES FOR EDIBLE PRINTOUTS &amp; CUSTOMISED TOPPERS</div>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="dessert-shots">
+          <div class="menu-card">
+            <div class="menu-title-row">DESSERT SHOTS</div>
+            <table class="menu-table">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Small</th>
+                  <th>Medium</th>
+                  <th>Jars(150ml)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Choco-Vanilla</td><td>50</td><td>70</td><td>200</td></tr>
+                <tr><td>Butterscotch</td><td>50</td><td>70</td><td>200</td></tr>
+                <tr><td>Strawberry (with fresh fruit)</td><td>60</td><td>80</td><td>250</td></tr>
+                <tr><td>Pineapple</td><td>60</td><td>80</td><td>250</td></tr>
+                <tr><td>Tiramisu</td><td>70</td><td>90</td><td>300</td></tr>
+                <tr><td>Choco-strawberry</td><td>50</td><td>70</td><td>250</td></tr>
+                <tr><td>Vanilla-blueberry</td><td>50</td><td>70</td><td>250</td></tr>
+                <tr><td>Indian fusion(rasmalai and gulab jamun)</td><td>60</td><td>80</td><td>300</td></tr>
+                <tr><td>Red velvet</td><td>60</td><td>80</td><td>300</td></tr>
+                <tr><td>Cake Pops</td><td colspan="3">50/- per pc</td></tr>
+                <tr><td>Customised cake pops</td><td colspan="3">60/- per pc</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="brownie">
+          <div class="menu-card">
+            <div class="menu-title-row">BROWNIE</div>
+            <table class="menu-table">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>3/inches(1pc)</th>
+                  <th>6/inches(4pc)</th>
+                  <th>9/inches(9pc)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Chocolate</td><td>80</td><td>320</td><td>720</td></tr>
+                <tr><td>Walnut</td><td>80</td><td>320</td><td>720</td></tr>
+                <tr><td>Almond</td><td>80</td><td>320</td><td>720</td></tr>
+                <tr><td>Lotus Biscoff</td><td>100</td><td>400</td><td>900</td></tr>
+                <tr><td>Oreo</td><td>80</td><td>320</td><td>720</td></tr>
+                <tr><td>Nutella</td><td>90</td><td>360</td><td>810</td></tr>
+                <tr><td>Chocolate over loaded</td><td>90</td><td>360</td><td>810</td></tr>
+                <tr><td>Pecan caramel</td><td>90</td><td>360</td><td>810</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="chocolates">
+          <div class="menu-card">
+            <div class="menu-title-row">CHOCOLATES</div>
+            <table class="menu-table">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Rate Per kg</th>
+                  <th>Rate Per pc</th>
+                  <th>Per gm(approx)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Plain</td><td>2000</td><td>40</td><td>12gm</td></tr>
+                <tr><td>Nuts</td><td>2800</td><td>65</td><td>15gm</td></tr>
+                <tr><td>Granola chocolate</td><td>3000</td><td>70</td><td>15gm</td></tr>
+                <tr><td>Truffles</td><td>3000</td><td>70</td><td>15gm</td></tr>
+                <tr><td>Bonbons</td><td>3000</td><td>70</td><td>15gm</td></tr>
+                <tr><td colspan="4" class="menu-subheading">Pure compound chocolates</td></tr>
+                <tr><td>Plain</td><td>1200</td><td>20</td><td>12gm</td></tr>
+                <tr><td>Nuts</td><td>1600</td><td>30</td><td>15gm</td></tr>
+                <tr><td>Granola chocolates</td><td>1800</td><td>40</td><td>15gm</td></tr>
+                <tr><td>Truffles</td><td>2000</td><td>40</td><td>15gm</td></tr>
+                <tr><td>Bonbons</td><td>2000</td><td>40</td><td>15gm</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="breads">
+          <div class="menu-card">
+            <div class="menu-title-row">BREADS</div>
+            <table class="menu-table">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>7inches</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Wholewheat</td><td>30</td></tr>
+                <tr><td>Palak/spinach</td><td>35</td></tr>
+                <tr><td>Beetroot</td><td>35</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="stuffed-buns">
+          <div class="menu-card">
+            <div class="menu-title-row">STUFFED BUNS</div>
+            <table class="menu-table">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Small</th>
+                  <th>Medium</th>
+                  <th>Big</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Vada pav</td><td>60</td><td>80</td><td>120</td></tr>
+                <tr><td>Corn cheese capsicum</td><td>60</td><td>80</td><td>120</td></tr>
+                <tr><td>Paneer capsicum tikka masala</td><td>70</td><td>90</td><td>150</td></tr>
+                <tr><td>Pesto sauce bun</td><td>70</td><td>90</td><td>150</td></tr>
+                <tr><td>Chocolate bun</td><td>70</td><td>90</td><td>150</td></tr>
+                <tr><td>Chilli cheese bun</td><td>70</td><td>90</td><td>150</td></tr>
+                <tr><td>Burger bun</td><td>20</td><td>30</td><td>-</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="garlic-bread">
+          <div class="menu-card">
+            <div class="menu-title-row">GARLIC BREAD with cheesy dip</div>
+            <table class="menu-table">
+              <tbody>
+                <tr>
+                  <td>6 inches – 200/-</td>
+                  <td>9 inches – 280/-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="donuts">
+          <div class="menu-card">
+            <div class="menu-title-row">DONUTS</div>
+            <table class="menu-table">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Small</th>
+                  <th>Medium</th>
+                  <th>Big</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Donuts</td><td>50</td><td>70</td><td>100</td></tr>
+                <tr><td>Customised donuts</td><td>60</td><td>80</td><td>120</td></tr>
+                <tr><td>Chocolate Babka</td><td>50</td><td>70</td><td>100</td></tr>
+                <tr><td>Almond chocolate babka</td><td>60</td><td>80</td><td>120</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="focaccia">
+          <div class="menu-card">
+            <div class="menu-title-row">FOCACCIA WITH DIP</div>
+            <table class="menu-table">
+              <thead>
+                <tr>
+                  <th>Size</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>5/5 inch</td><td>150</td></tr>
+                <tr><td>8/8 inch</td><td>220</td></tr>
+                <tr><td>9/6 inch</td><td>250</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="cookies">
+          <div class="menu-card">
+            <div class="menu-title-row">COOKIES</div>
+            <table class="menu-table">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>250gm</th>
+                  <th>500gm</th>
+                  <th>1kg</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Nan khatia</td><td>250</td><td>500</td><td>1000</td></tr>
+                <tr><td>Dryfruits nan khatia</td><td>320</td><td>625</td><td>1250</td></tr>
+                <tr><td>Almond stick biscuit</td><td>300</td><td>600</td><td>1200</td></tr>
+                <tr><td>Chocochips cookies</td><td>300</td><td>600</td><td>1200</td></tr>
+                <tr><td>Short bread cookies</td><td>250</td><td>500</td><td>1000</td></tr>
+                <tr><td>Granola cookies</td><td>350</td><td>700</td><td>1400</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="sweet-tarts">
+          <div class="menu-card">
+            <div class="menu-title-row">SWEET TARTS</div>
+            <table class="menu-table">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Small 2.5inch</th>
+                  <th>Medium 4inch</th>
+                  <th>Big 6inch</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Chocolate</td><td>70</td><td>120</td><td>200</td></tr>
+                <tr><td>Banoffee</td><td>70</td><td>120</td><td>200</td></tr>
+                <tr><td>Custard with Mix fruits</td><td>80</td><td>150</td><td>230</td></tr>
+                <tr><td>Mango (seasonal)</td><td>80</td><td>150</td><td>230</td></tr>
+                <tr><td>Strawberry(seasonal)</td><td>80</td><td>150</td><td>230</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-footer-strip">
+        <p>ALL ITEMS ALSO AVAILABLE IN JAIN</p>
+        <p>All our items are handmade, preservatives free and 100% vegetarian</p>
+        <p>For orders call on 9043682788 / 7904995130</p>
+        <p>FOLLOW US : Facebook page "Relation Chocolates"</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const tabs = document.querySelectorAll('.menu-tab');
+    const panels = document.querySelectorAll('.menu-panel');
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.target;
+
+        tabs.forEach((button) => button.classList.toggle('active', button === tab));
+        panels.forEach((panel) => {
+          panel.classList.toggle('active', panel.id === target);
+        });
+      });
+    });
+  </script>
+{% endblock %}

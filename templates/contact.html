@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Relation Chocolates | Contact{% endblock %}
+
+{% block content %}
+  <section class="page-header">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you &mdash; orders, questions, or custom gifts.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-grid">
+      <div class="contact-card">
+        <h2>Custom Orders</h2>
+        <p>Freshly made from our home kitchen for gifting, celebrations, and your cravings.</p>
+        <p>Message us to discuss your ideas!</p>
+      </div>
+
+      <div class="contact-card">
+        <h2>Reach Out</h2>
+        <p>
+          Phone:
+          <a href="tel:+919043682788">+91 90436 82788</a>
+          <span aria-hidden="true">&middot;</span>
+          <a href="tel:+917904995130">+91 79049 95130</a>
+        </p>
+        <p>
+          <a
+            class="btn btn-primary btn-contact"
+            href="https://wa.me/919043682788?text=Hi!%20I'd%20like%20to%20place%20an%20order."
+            target="_blank"
+            rel="noopener noreferrer"
+            >Message on WhatsApp</a
+          >
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <h2>Hours</h2>
+        <p>Mon - Sun: 8:00 AM - 9:00 PM</p>
+      </div>
+    </div>
+
+    <p class="contact-note">
+      Call or message us to place your order &mdash; we'll confirm availability and
+      delivery details with you directly.
+    </p>
+  </section>
+{% endblock %}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Relation Chocolates{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    {% block extra_css %}{% endblock %}
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="{{ url_for('home') }}">Relation Chocolates</a>
+        <nav class="main-nav">
+          <a href="{{ url_for('home') }}" class="{% if active_page == 'home' %}active{% endif %}">Home</a>
+          <a href="{{ url_for('menu') }}" class="{% if active_page == 'menu' %}active{% endif %}">Menu</a>
+          <a href="{{ url_for('contact') }}" class="{% if active_page == 'contact' %}active{% endif %}">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-brand">Relation Chocolates</p>
+        <p class="footer-tagline">Crafting memories one bite at a time</p>
+        <p class="footer-contact">
+          <a href="tel:+919043682788">+91 90436 82788</a>
+          &middot;
+          <a href="tel:+917904995130">+91 79049 95130</a>
+          &middot;
+          <a
+            href="https://wa.me/919043682788"
+            target="_blank"
+            rel="noopener noreferrer"
+            >WhatsApp</a
+          >
+        </p>
+        <p class="footer-copy">&copy; 2026 Relation Chocolates. All rights reserved.</p>
+      </div>
+    </footer>
+
+    {% block extra_js %}{% endblock %}
+  </body>
+</html>
